@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="coleccionismo y noticias de star wars">
+    <meta name="keywords" content="STAR WARS, COLLECTOR, COLLECTION, HASBRO, BLACK SERIES, BANDAI, ACTION FIGURES">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <title>Highground Collection</title>
+
+</head>
+<body>
+     <!------------------------------NAVBAR------------------------------>
+     <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="/img/logo.png" alt="logo" width="90" height="90" class="d-inline-block"><h2 class="d-none d-md-inline-block ml-1 " id="nav-title">highground collection</h2></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="nav__button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto" id="navbar__items">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/reviews.html">Reviews</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/galeria.html">Galeria</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/novedades.html">Novedades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/contacto.html">Contacto</a>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+    <!----------------CONTENIDO---------------->
+    <!--GALERIA-->
+    <div class="container-lg text-center" id="gallery">
+        <h1 class="text-center mb-5" id="review__title">Galeria</h1>
+
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3 mb-2">
+            <div class="col" id="gallery__item">
+                <img src="/img/501clones.jpg"  alt="Gallery1" class="gallery-item">
+            </div>
+            <div class="col" id="gallery__item">
+                <img src="/img/chirrutimwebs.jpg"  alt="Gallery1" class="gallery-item">
+            </div>
+            <div class="col" id="gallery__item">
+                <img src="/img/fennecshandbs.jpg"  alt="Gallery1" class="gallery-item">
+            </div>
+            <div class="col" id="gallery__item">
+                <img src="/img/lukegrogubs.jpg"  alt="Gallery1" class="gallery-item">
+            </div>
+            <div class="col" id="gallery__item">
+                <img src="/img/obiwankenobiep2shf.jpg"  alt="Gallery1" class="gallery-item">
+            </div>
+            <div class="col" id="gallery__item">
+                <img src="/img/padmeshf.jpg"  alt="Gallery1" class="gallery-item">
+            </div>
+
+
+        </div>
+    </div>
+    
+    <!--FOOTER-->
+    <footer>
+        <div class="footer-text fs-2">
+          <p class="text-center">may the force be with you</p>
+        </div>
+        <div class="redes-sociales fs-4 mb-2">
+          <a href="https://instagram.com/highground.collection" target="_BLANK"><i class="bi bi-instagram"></i></a>
+          <a href="https://instagram.com/highground.collection" target="_BLANK"><i class="bi bi-facebook"></i></a>
+          <a href="https://instagram.com/highground.collection" target="_BLANK"><i class="bi bi-twitter"></i></a>
+          <a href="https://instagram.com/highground.collection" target="_BLANK"><i class="bi bi-pinterest"></i></a>
+        </div>
+      </footer>
+      <!-- Modal -->
+    <div class="modal fade" id="gallery-popup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="/img/501clones.jpg" class="modal-img" alt="Modal Image">
+            </div>
+          </div>
+        </div>
+      </div>
+            
+        <script type="text/javascript">
+          document.addEventListener("click",function (e){
+            if(e.target.classList.contains("gallery-item")){
+                const src = e.target.getAttribute("src");
+                document.querySelector(".modal-img").src = src;
+                const myModal = new bootstrap.Modal(document.getElementById('gallery-popup'));
+                myModal.show();
+            }
+          })
+        </script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

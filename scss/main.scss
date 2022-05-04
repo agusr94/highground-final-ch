@@ -1,0 +1,165 @@
+$highground: rgb(222, 153, 26);
+$backtextcolor: #141313;
+$starbackgroud: url(/img/navbackground.jpg);
+$navbar-dark-color:                 rgba($highground, .55);
+$navbar-dark-hover-color:           rgba($highground, .75);
+$navbar-dark-active-color:          $highground;
+$navbar-dark-disabled-color:        rgba($highground, .25);
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-dark-toggler-border-color:  rgba($highground, .1);
+$theme-colors:(
+    "highground": $highground,
+    "backtextcolor": $backtextcolor
+
+);
+@font-face {
+    font-family: 'starWarsFont';
+    src: url(/font/Starjedi.ttf);
+}
+body{
+    background: $starbackgroud;
+}
+/*----------------------NAV----------------------*/
+#navbar {
+    background: $starbackgroud;
+}
+.nav-item{
+    padding-right: 10px;
+}
+#nav-title{
+    font-family: 'starWarsFont';
+    letter-spacing: 2px;
+    color: $highground;
+    margin-left: 5px;
+}
+#nav__button{
+    color: $highground;
+}
+/*--------------------BARRA SEPARADORA------------------*/
+.separador{
+    background-image: url(/img/navbackground.jpg);
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.separador-img img{
+    width: 200px;
+    height: 200px;
+}
+/*----------------------CARDS----------------*/
+.card-border{
+    border: solid 10px white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease-out 0.2s;
+}
+.card-border:hover{
+    transform: scale(1.05);
+}
+.hello{
+    color: $highground;
+    font-family: 'starWarsFont';
+}
+#hellothere__text{
+    background: #141313;
+}
+#card__button{
+    background: $highground;
+}
+
+/*--------------------REVIEWS-----------------*/
+#review__img{
+    width: 400px;
+    height: 400px;
+}
+#review__img img{
+    width: 400px;
+    height: 400px;
+    border: 2px solid $highground;
+}
+#review__text h2{
+    color: $highground;
+}
+#review__text{
+    color: white;
+    background: $backtextcolor;
+}
+#review__title{
+    align-self: center;
+    font-family: 'starWarsFont';
+    color: $highground;
+
+}
+/*-----------------GALERIA---------------------*/
+#gallery__item img{
+    height: 350px;
+    width: 350px;
+    border: 1px solid $highground;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+
+}
+
+#gallery-popup .modal-img{
+	width: 100%;
+}
+
+/*--------------CONTACTO-------------------*/
+#contact__img img{
+    height: 450px;
+    width: 350px;
+}
+.form-box{
+    background: $backtextcolor;
+    color: white;
+}
+#form__button{
+    color: white;
+    background: $highground;
+}
+
+/*----------------------FOOTER----------------*/
+.footer-text{
+    display: flex;
+    justify-content: center;
+    color: $highground;
+    font-family: 'starWarsFont';
+}
+.redes-sociales{
+    color: $highground;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 10px;
+}
+
+.redes-sociales a i{
+    text-decoration: none;
+    color: $highground;
+}
+/*-------------------MEDIA QUERIES------------------*/
+@media (min-width: 992px){
+    #navbarSupportedContent{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+@media (max-width: 992px){
+    #review__row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    #card__row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #contact__row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"
